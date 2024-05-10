@@ -9,7 +9,47 @@
 
 <body>
     <div id="root"></div>
-    <script src="../build/main.bb53da7411a42b5d8954.js"></script>
+    <form action="#" class="form__calculator">
+        <div class="input">
+            <select id="type">
+                <option class="option-header" value="" disabled selected hidden>Вид вклада</option>
+                <option value="Пополняемый">Пополняемый</option>
+                <option value="Срочный">Срочный</option>
+            </select>
+            <select id="percent-one">
+                <option class="option-header" value="" disabled selected hidden>Срок вклада</option>
+                <option value="6 месяцев, 0.5, 0.2">6 месяцев - 20%</option>
+                <option value="1 год, 1, 0.22">1 год - 22%</option>
+                <option value="1.5 года, 1.5, 0.15">1,5 года - 15%</option>
+                <option value="2 года, 2, 0.10">2 года - 10%</option>
+            </select>
+
+            <select id="percent-two" style="display: none;">
+                <option class="option-header" value="" disabled selected hidden>Срок вклада</option>
+                <option value="3 месяцев, 0.25, 0.2">3 месяцев - 20%</option>
+                <option value="6 месяцев, 0.5, 0.22">6 месяцев - 22%</option>
+                <option value="9 месяцев, 0.75, 0.23">9 месяцев - 23%</option>
+                <option value="1 год, 1, 0.24">1 год - 24%</option>
+                <option value="1.5 года, 1.5, 0.18">1.5 года - 18%</option>
+                <option value="2 год, 2, 0.15">2 года - 15%</option>
+            </select>
+
+            <input type="text" pattern="^\d*(\.\d{0,2})?$" id="moneySum" class="form__calculator-sum"
+                placeholder="Сумма руб.">
+            <button class="form__calculator-button">Рассчитать</button>
+        </div>
+        <div class="output">
+            <div class="output__wrapper">
+                <div class="out__text">
+                    <p class="out__text-info" id="id_out__text-info">Ваши расчеты произойдут тут</p>
+                    <p class="out__text-sum" id="id_out__text-sum">Ваши расчеты произойдут тут</p>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="next__page">
+        <a href="second.html">Вакансии hh.ru</a>
+    </div>
 </body>
 
 </html>
